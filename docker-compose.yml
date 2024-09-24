@@ -1,0 +1,12 @@
+services:
+  rabbitmq:
+    container_name: "rabbitmq"
+    image: rabbitmq:3.13.7-management-alpine
+    environment:
+      - RABBITMQ_DEFAULT_USER=RABBITMQ_DEFAULT_USER=user
+      - RABBITMQ_DEFAULT_PASS=password
+    ports:
+    # RabbitMQ 
+      - '5672:5672'
+    # Для веб интерфейса
+      - '15672:15672'
